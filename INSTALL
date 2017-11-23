@@ -1,0 +1,9 @@
+Building Hawaiicoin
+
+See doc/readme-qt.rst for instructions on building Hawaiicoin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Hawaiicoin.
+
+See doc/build-*.txt for instructions on building hawaiicoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Hawaiicoin.
