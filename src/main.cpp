@@ -1189,7 +1189,7 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
     return bnNew.GetCompact();
 }
 
-unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const CB$
+unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
 
 unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
@@ -1262,10 +1262,10 @@ int DiffMode = 1;
 		nTargetSpacing = 60; // A block every minute
 		nInterval = nTargetTimespan / nTargetSpacing; // calc diff every 60 blocks
 	}
-                else if (pindexLast->nHeight+1 >= 1) { DiffMode = 1; }
-				
-        }
-        
+        else if (pindexLast->nHeight+1 >= 1) {
+		DiffMode = 1;
+	}
+
         if (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); }
         else if (DiffMode == 2) { return DarkGravityWave3(pindexLast, pblock); }
         return DarkGravityWave3(pindexLast, pblock);
