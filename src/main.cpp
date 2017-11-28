@@ -1256,7 +1256,7 @@ unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
 int DiffMode = 1;
-        if (pindexLast->nHeight+1 >= 9850) {
+        if (pindexLast->nHeight+1 >= 32471) {
 		DiffMode = 2;
 		nTargetTimespan = 60 * 60; // 1 hour lookback for rediff calc
 		nTargetSpacing = 60; // A block every minute
