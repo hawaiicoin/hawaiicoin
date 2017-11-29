@@ -1,4 +1,4 @@
-Hawaiicoin - A slice of Aloha!
+Hawaiicoin - A Slice of Aloha!
 ================================
 
 Copyright (c) 2009-2017 Hawaiicoin Developers
@@ -26,7 +26,7 @@ Its development tracks Bitcoin's and the following information applies to Bitcoi
 Development process
 -------------------
 
-Compilation instructions for Linux
+Compilation instructions for Linux (on 14.04 via instructions here: https://gist.github.com/kostaz/19729e6d53adc5d1606c)
 
 Daemon:
 cd src
@@ -37,4 +37,11 @@ Wallet:
 cd src
 qmake
 make
-strip hawaiicoind
+strip hawaiicoin-qt
+
+
+Compilation instructions for Windows
+
+Follow the instructions here (under 0.8.6 code base) to set up compile deps and minGW, including path definitions for qt.pro and makefile.mingw
+
+https://bitcointalk.org/index.php?topic=149479.0
